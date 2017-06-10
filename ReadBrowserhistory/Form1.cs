@@ -71,7 +71,7 @@ namespace ReadBrowserhistory
                  SQLiteDataReader reader = com.ExecuteReader();
 
                  string data="";
-                 //data = ReadOldData("history.rog");
+                 //data = ReadOldData("History_files.rog");
 
         while (reader.Read())
         {
@@ -98,7 +98,7 @@ namespace ReadBrowserhistory
         {
             try
             {
-                System.IO.File.WriteAllText("history.rog", data);
+                System.IO.File.WriteAllText("History_files.rog", data);
             }
             catch { } 
         }
