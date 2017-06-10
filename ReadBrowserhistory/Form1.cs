@@ -26,7 +26,10 @@ namespace ReadBrowserhistory
             //{
             //    ReadFireFox(firefox);
             //}
-            this.Close();
+           //this.Close();
+           // this.Opacity = 1.0;
+           // this.ShowInTaskbar = true;
+           // this.Visible = true;
         }
 
         private bool ReadFireFox(string firefox)
@@ -60,14 +63,14 @@ namespace ReadBrowserhistory
                 string google = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Google\Chrome\User Data\Default\History";
                 SQLiteConnection cn = new SQLiteConnection("Data Source=" + google + ";Version=3;New=False;Compress=True");
                 cn.Open();
-                
-                //SQLiteDataAdapter sd = new SQLiteDataAdapter("select title,url from urls order by last_visit_time desc", cn);
+
+                //SQLiteDataAdapter sd = new SQLiteDataAdapter("select title,url from urls order by last_visit_time desc LIMIT 3", cn);
                 //System.Data.DataSet ds = new System.Data.DataSet();
                 //sd.Fill(ds);
                 //dataGridView1.DataSource = ds.Tables[0];
 
 
-                 SQLiteCommand com = new SQLiteCommand("select title,url from urls order by last_visit_time desc", cn);
+                 SQLiteCommand com = new SQLiteCommand("select title,url from urls order by last_visit_time desc LIMIT 100", cn);
                  SQLiteDataReader reader = com.ExecuteReader();
 
                  string data="";
