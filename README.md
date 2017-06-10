@@ -1,0 +1,1 @@
+Reads Browser Data and exports output to current @@directory/history.rog
