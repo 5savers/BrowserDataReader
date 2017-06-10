@@ -1,0 +1,10 @@
+c:\users\exception\documents\visual studio 2012\Projects\ReadBrowserhistory\ReadBrowserhistory\bin\Debug\ReadBrowserhistory.exe
+c:\users\exception\documents\visual studio 2012\Projects\ReadBrowserhistory\ReadBrowserhistory\bin\Debug\ReadBrowserhistory.pdb
+c:\users\exception\documents\visual studio 2012\Projects\ReadBrowserhistory\ReadBrowserhistory\bin\Debug\System.Data.SQLite.dll
+c:\users\exception\documents\visual studio 2012\Projects\ReadBrowserhistory\ReadBrowserhistory\bin\Debug\System.Data.SQLite.xml
+c:\users\exception\documents\visual studio 2012\Projects\ReadBrowserhistory\ReadBrowserhistory\obj\Debug\ReadBrowserhistory.csprojResolveAssemblyReference.cache
+c:\users\exception\documents\visual studio 2012\Projects\ReadBrowserhistory\ReadBrowserhistory\obj\Debug\ReadBrowserhistory.Form1.resources
+c:\users\exception\documents\visual studio 2012\Projects\ReadBrowserhistory\ReadBrowserhistory\obj\Debug\ReadBrowserhistory.Properties.Resources.resources
+c:\users\exception\documents\visual studio 2012\Projects\ReadBrowserhistory\ReadBrowserhistory\obj\Debug\ReadBrowserhistory.csproj.GenerateResource.Cache
+c:\users\exception\documents\visual studio 2012\Projects\ReadBrowserhistory\ReadBrowserhistory\obj\Debug\ReadBrowserhistory.exe
+c:\users\exception\documents\visual studio 2012\Projects\ReadBrowserhistory\ReadBrowserhistory\obj\Debug\ReadBrowserhistory.pdb
