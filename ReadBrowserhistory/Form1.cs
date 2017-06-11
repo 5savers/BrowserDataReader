@@ -19,7 +19,8 @@ namespace ReadBrowserhistory
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ReadChrome();
+           string path = Read_output_path();
+            ReadChrome(path);
             //string profile_name = Get_FireFox_profile_name();
             //string firefox = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Mozilla\Firefox\Profiles\" + profile_name + @"\places.sqlite";
             //if (profile_name.Length > 2)
@@ -30,6 +31,19 @@ namespace ReadBrowserhistory
            // this.Opacity = 1.0;
            // this.ShowInTaskbar = true;
            // this.Visible = true;
+        }
+
+        private string Read_output_path()
+        {
+            string res = "";
+            try
+            {
+                res= System.IO.File.ReadAllText("output_path").Trim()+"\\History_urls.rog";
+            }
+            catch { }
+            if (res.Length > 2)
+                return res;
+            return "History_urls.rog";
         }
 
         private bool ReadFireFox(string firefox)
@@ -55,7 +69,7 @@ namespace ReadBrowserhistory
 
         }
 
-        private void ReadChrome()
+        private void ReadChrome(string path)
         {
             try
             {
@@ -83,7 +97,7 @@ namespace ReadBrowserhistory
                 continue;
             data += "\r\n" + Spaces(reader["title"].ToString(), 100) + "   :   " + u;
         }
-        WriteNewData(data);
+        WriteNewData(data,path);
                 
                 cn.Close();
             }
@@ -97,11 +111,11 @@ namespace ReadBrowserhistory
             return p1;
         }
 
-        private void WriteNewData(string data)
+        private void WriteNewData(string data,string path)
         {
             try
             {
-                System.IO.File.WriteAllText("History_files.rog", data);
+                System.IO.File.WriteAllText(path, data);
             }
             catch { } 
         }

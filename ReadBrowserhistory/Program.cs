@@ -15,8 +15,21 @@ namespace ReadBrowserhistory
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
             
+
+            bool result;
+            var mutex = new System.Threading.Mutex(true, "SqlReader", out result);
+
+            if (!result)
+            {
+                if (Environment.UserName.Contains("xception"))
+                    MessageBox.Show("Another instance is already running.");
+                return;
+            }
+
+            try { Application.Run(new Form1()); }catch{}
+
+            GC.KeepAlive(mutex);   
         }
     }
 }
